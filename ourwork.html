@@ -1,57 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- this is the basic setup for the webpage -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Work</title>
+
+    <!-- this is the W3CSS link for prebuilt styles -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <!-- this is the font setup -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
     <style>
+      /* this is the main font and layout style */
       body {
         font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
           sans-serif;
       }
+
+      /* this is the hero banner with your image */
       .page-hero {
-        background: #0b1220;
+        position: relative; /* this is so the overlay can sit on top */
+        background: url("images/gallery/car-blue.webp") center/cover no-repeat;
         color: #fff;
-        padding: 56px 16px;
+        padding: 120px 16px; /* this is banner height */
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
       }
+      /* this is the dark overlay so text stays readable */
+      .page-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+      }
+      /* this is the wrapper so text appears above overlay */
+      .page-hero-inner {
+        position: relative; /* this is to sit above ::before */
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      /* this is a shared class for padding around sections */
       .section {
         padding: 48px 0;
       }
+
+      /* this is how each gallery image is styled */
       .gallery img {
         width: 100%;
         height: 220px;
         object-fit: cover;
         border-radius: 8px;
       }
+
+      /* this is how the white cards have rounded corners */
       .card {
         border-radius: 10px;
       }
+
+      /* this is the style for testimonial text */
       .testimonial-quote {
         font-size: 1.05rem;
       }
+
+      /* this is the footer style */
       footer {
         margin-top: 40px;
         padding-top: 20px;
         border-top: 2px solid #2563eb;
       }
+
+      /* this is responsive tweaks */
+      @media (max-width: 600px) {
+        .gallery img {
+          height: 200px;
+        }
+        .page-hero {
+          padding: 80px 12px;
+        } /* this is a shorter banner on phones */
+      }
     </style>
   </head>
+
   <body class="w3-light-grey">
-    <!-- Top Nav -->
+    <!-- this is the top navigation bar -->
     <div class="w3-bar w3-black">
-      <a href="index.html" class="w3-bar-item">
+      <!-- this is the logo on the top left -->
+      <a href="index.html" class="w3-bar-item" aria-label="Home">
         <img
           style="width: 60px"
           src="https://images.squarespace-cdn.com/content/v1/5e30903bd46e49641286bc4b/1580242027581-JTRKAVIWUHDQXZFZA9L8/AV+Repair+Logo.png"
-          alt="Logo"
+          alt="AV Repair Logo"
         />
       </a>
+
+      <!-- this is the list of nav links -->
       <a href="index.html" class="w3-bar-item w3-button w3-hover-blue">Home</a>
       <a href="about.html" class="w3-bar-item w3-button w3-hover-blue">About</a>
       <a href="services.html" class="w3-bar-item w3-button w3-hover-blue"
@@ -61,6 +109,8 @@
       <a href="cartalk.html" class="w3-bar-item w3-button w3-hover-blue"
         >Car Talk</a
       >
+
+      <!-- this is the facebook link on the right -->
       <a
         href="https://www.facebook.com/groups/1889685858011404/"
         class="w3-bar-item w3-button w3-right w3-hover-blue"
@@ -74,144 +124,273 @@
       </a>
     </div>
 
-    <!-- Hero -->
+    <!-- this is the hero header section with full banner -->
     <header class="page-hero w3-center">
-      <h1 class="w3-xxlarge w3-margin-bottom">Our Work</h1>
-      <p class="w3-opacity">
-        Real projects, happy customers, and the skills behind it.
-      </p>
+      <div class="page-hero-inner">
+        <h1 class="w3-xxlarge w3-margin-bottom">Our Work</h1>
+        <p class="w3-opacity">
+          Real projects, happy customers, and the skills behind it.
+        </p>
+      </div>
     </header>
 
-    <!-- Expertise -->
-    <section id="expertise" class="section">
+    <!-- this is the expertise section (UPDATED with your 3 images + bold titles) -->
+    <section id="expertise" class="section w3-white">
       <div class="w3-content" style="max-width: 1100px">
         <h2 class="w3-center">Our Expertise</h2>
-        <p class="w3-center w3-text-grey">What we bring to every project.</p>
 
+        <!-- this is your paragraph (unchanged) -->
+        <p
+          class="w3-center w3-text-grey"
+          style="max-width: 900px; margin: 0 auto"
+        >
+          We are a friendly, professional family owned and operated auto body
+          shop serving North Andover and the surrounding areas. We have been in
+          business for more than 25 years and have a great reputation for our
+          top-quality workmanship and our attention to detail. Our goal at AV
+          Repair is to provide you with an exceptional experience and make every
+          effort to give you our best throughout the entire repair process,
+          which is designed to be as smooth and simple as possible. We always
+          strive for excellence and 100% customer satisfaction and our high
+          level of repeat customers proves this. Come experience our expertise!
+        </p>
+
+        <!-- this is a 3-column row of expertise images with bold titles above each -->
         <div class="w3-row-padding w3-margin-top">
-          <div class="w3-third w3-margin-bottom">
-            <div class="w3-white w3-padding w3-card card">
-              <h3 class="w3-margin-top">Web Design</h3>
-              <p>
-                Clean, responsive layouts focused on usability and conversion.
-              </p>
-              <ul class="w3-ul w3-small w3-border">
-                <li>Responsive UI</li>
-                <li>Accessibility (WCAG)</li>
-                <li>Design Systems</li>
-              </ul>
-            </div>
+          <div class="w3-third w3-margin-bottom w3-center">
+            <p><strong>Engine Tuning and Performance</strong></p>
+            <img
+              src="images/expertise/engine-tuning.png"
+              alt="Engine tuning and performance"
+              class="w3-image w3-round-large w3-card"
+              loading="lazy"
+            />
           </div>
 
-          <div class="w3-third w3-margin-bottom">
-            <div class="w3-white w3-padding w3-card card">
-              <h3 class="w3-margin-top">Development</h3>
-              <p>Modern, maintainable code with performance best practices.</p>
-              <ul class="w3-ul w3-small w3-border">
-                <li>HTML/CSS/JS</li>
-                <li>Component-based workflows</li>
-                <li>CI/CD ready</li>
-              </ul>
-            </div>
+          <div class="w3-third w3-margin-bottom w3-center">
+            <p><strong>Tire Mounting, Rotation and Balancing</strong></p>
+            <img
+              src="images/expertise/tires.png"
+              alt="Tire mounting, rotation and balancing"
+              class="w3-image w3-round-large w3-card"
+              loading="lazy"
+            />
           </div>
 
-          <div class="w3-third w3-margin-bottom">
-            <div class="w3-white w3-padding w3-card card">
-              <h3 class="w3-margin-top">Brand & Content</h3>
-              <p>Clear messaging and visuals that fit your audience.</p>
-              <ul class="w3-ul w3-small w3-border">
-                <li>Copy & imagery</li>
-                <li>SEO basics</li>
-                <li>Analytics setup</li>
-              </ul>
-            </div>
+          <div class="w3-third w3-margin-bottom w3-center">
+            <p><strong>Paint Services</strong></p>
+            <img
+              src="images/expertise/paint.png"
+              alt="Paint services"
+              class="w3-image w3-round-large w3-card"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Photo Gallery -->
+    <!-- this is the photo gallery section (all your images intact) -->
     <section id="gallery" class="section w3-white">
       <div class="w3-content" style="max-width: 1100px">
         <h2 class="w3-center">Photo Gallery</h2>
-        <p class="w3-center w3-text-grey">A snapshot of recent work.</p>
+        <p class="w3-center w3-text-grey">The best or nothing at all.</p>
 
+        <!-- this is the grid of images -->
         <div class="w3-row-padding w3-margin-top gallery">
+          <!-- this is your new blue car image -->
           <div class="w3-third w3-margin-bottom">
             <img
-              src="https://picsum.photos/seed/work1/800/600"
-              alt="Project 1"
+              src="images/gallery/car-blue.webp"
+              alt="Blue car project"
+              loading="lazy"
             />
           </div>
+
           <div class="w3-third w3-margin-bottom">
             <img
-              src="https://picsum.photos/seed/work2/800/600"
-              alt="Project 2"
+              src="images/gallery/car-front.webp"
+              alt="Front view"
+              loading="lazy"
             />
           </div>
+
           <div class="w3-third w3-margin-bottom">
             <img
-              src="https://picsum.photos/seed/work3/800/600"
-              alt="Project 3"
+              src="images/gallery/monte-carlo.webp"
+              alt="Monte Carlo on lift"
+              loading="lazy"
             />
           </div>
+
           <div class="w3-third w3-margin-bottom">
             <img
-              src="https://picsum.photos/seed/work4/800/600"
-              alt="Project 4"
+              src="images/gallery/58-chevy.webp"
+              alt="1958 Chevy"
+              loading="lazy"
             />
           </div>
+
           <div class="w3-third w3-margin-bottom">
             <img
-              src="https://picsum.photos/seed/work5/800/600"
-              alt="Project 5"
+              src="images/gallery/diving-in.webp"
+              alt="Mechanic diving in"
+              loading="lazy"
             />
           </div>
+
           <div class="w3-third w3-margin-bottom">
             <img
-              src="https://picsum.photos/seed/work6/800/600"
-              alt="Project 6"
+              src="images/gallery/personal-203.webp"
+              alt="Project 203 – engine build"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="w3-third w3-margin-bottom">
+            <img
+              src="images/gallery/personal-194.webp"
+              alt="Project 194 – interior"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="w3-third w3-margin-bottom">
+            <img
+              src="images/gallery/personal-140.webp"
+              alt="Project 140 – gray classic car"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="w3-third w3-margin-bottom">
+            <img
+              src="images/gallery/engine-red.webp"
+              alt="Engine close-up (red)"
+              loading="lazy"
             />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- this is the testimonials section (your custom copy) -->
     <section id="testimonials" class="section">
       <div class="w3-content" style="max-width: 900px">
-        <h2 class="w3-center">Testimonials</h2>
+        <h2 class="w3-center">Customer Testimonials</h2>
 
+        <!-- this is the click-to-call line (replace number below with the real one) -->
+        <p class="w3-center">
+          <a class="w3-button w3-blue w3-round" href="tel:+1-000-000-0000"
+            >Click to call now</a
+          >
+        </p>
+
+        <!-- this is Kathy's testimonial -->
         <div class="w3-panel w3-leftbar w3-border-blue w3-white w3-card card">
           <p class="testimonial-quote">
-            “They transformed our online presence and were amazing communicators
-            the whole way.”
+            “I had pulled into a parking spot that had a chunk of ice which
+            pulled off the plastic undercover of the front of my car. When I hit
+            40 mph, my car sounded like a bicycle with a trading card in the
+            spokes. After being told it would be a wait of at least two weeks to
+            get it repaired at a Toyota collision center, I stopped at AV Repair
+            on my way to work. Not only was my car put on the lift within 10
+            minutes, Mr. Smetanka had the mechanic put in some screws to hold it
+            in place. He explained that except for the fact the plastic was a
+            bit ragged from scraping the road, it did not need any further
+            repair. When I asked for the bill, he said, ‘No charge. Glad to
+            help.’ I haven't had anyone be this honest and generous in a long
+            time. I will definitely take my car here if it needs any repairs. I
+            have also recommended AV repair to all my friends in the area.”
           </p>
-          <p class="w3-text-grey">— Sarah P., Small Business Owner</p>
+          <p class="w3-text-grey">— Kathy P, Malden MA</p>
         </div>
 
+        <!-- this is Matt's testimonial -->
         <div class="w3-panel w3-leftbar w3-border-blue w3-white w3-card card">
           <p class="testimonial-quote">
-            “Professional, creative, and fast. Our site loads quicker and looks
-            great.”
+            “On a Thursday evening, I called AV Repair to have them look at some
+            rear bumper damage to my car. Jim was able to look at it first thing
+            Friday morning. When I dropped it off, he took a look at it,
+            explained what he could see, then explained to me what the potential
+            issues could be once they looked underneath. About an hour later he
+            called back and explained the situation: cosmetic damage only. I
+            pushed a little to make sure there wasn't anything that I really
+            needed to take care of. He explained which layers of the bumper had
+            absorbed the impact and which hadn't even been touched, setting my
+            mind at ease. I would go back to AV Repair in a heartbeat. They have
+            a strong customer service focus, are patient, and they're willing to
+            educate people like me.”
           </p>
-          <p class="w3-text-grey">— John D., Marketing Director</p>
+          <p class="w3-text-grey">— Matt W, Middleton MA</p>
         </div>
 
+        <!-- this is FP's testimonial -->
         <div class="w3-panel w3-leftbar w3-border-blue w3-white w3-card card">
           <p class="testimonial-quote">
-            “Super easy to work with. They handled design, dev, and content
-            seamlessly.”
+            “I've been in the area almost 13yrs and have never found a garage
+            that I felt I could really trust. We found this place as we were
+            looking for a repair shop after our car was involved in fender
+            bender and needed body work back in Dec'12/Jan'13. Jim was very
+            helpful and informative and he also took time to explain a lot of
+            the work that was needed. He also mentioned they do more than just
+            autobody work and based on that, we decided to send our cars over
+            for maintenance and other repairs. Since we started going there, we
+            have been VERY pleased with the service, the quick turnaround time,
+            the reasonable prices, and also with Jim's candor. If we were
+            looking at a big job for a car, he asked what our intentions were to
+            put into perspective whether the fix was really needed or possibly a
+            nice-to-have. We ended up not having the job done, which would have
+            been more than $2k, but he's earned our trust and repeated
+            business.”
           </p>
-          <p class="w3-text-grey">— Alicia M., Founder</p>
+          <p class="w3-text-grey">— FP. North Andover MA</p>
+        </div>
+
+        <!-- this is Dave's testimonial -->
+        <div class="w3-panel w3-leftbar w3-border-blue w3-white w3-card card">
+          <p class="testimonial-quote">
+            “Looking for a good place to keep your car running &amp; looking
+            good? AV Repair in N. Andover is the place to go. This is one stop
+            shopping for your vehicle. They do auto repair &amp; auto body &amp;
+            they do both very well. Fair prices. They work well with &amp; are
+            recommended by many insurance companies. Jim the owner is a real car
+            guy &amp; will make sure you and your car are happy when you leave.”
+          </p>
+          <p class="w3-text-grey">— Dave B. Maynard MA</p>
+        </div>
+
+        <!-- this is JJ's testimonial -->
+        <div class="w3-panel w3-leftbar w3-border-blue w3-white w3-card card">
+          <p class="testimonial-quote">
+            “I was visiting from out of town, got side-swiped, and needed to get
+            a fast repair. These guys were great: trustworthy, honest, reliable,
+            and friendly. They gave me a very fair price for the work, they did
+            it super fast, and they did exactly what they promised. I am so glad
+            I found these guys.”
+          </p>
+          <p class="w3-text-grey">— JJ M. San Francisco CA</p>
+        </div>
+
+        <!-- this is Paul's testimonial -->
+        <div class="w3-panel w3-leftbar w3-border-blue w3-white w3-card card">
+          <p class="testimonial-quote">
+            “Jim and his team are my go-to auto service shop. I’ve been taking
+            my cars to him for over 25 years. They’ve done everything from body
+            work to engine repair. I wouldn’t think of taking a vehicle of mine
+            anywhere else.”
+          </p>
+          <p class="w3-text-grey">— Paul M. Andover MA</p>
         </div>
       </div>
     </section>
 
-    <!-- Global Footer -->
+    <!-- this is the footer that appears at the bottom -->
     <footer class="w3-center w3-black w3-padding-32 w3-text-white">
       <div class="w3-content" style="max-width: 1000px">
         <p>© 2025 AV Repair — All Rights Reserved.</p>
+
+        <!-- this is the list of footer links -->
         <p>
           <a href="about.html" class="w3-text-blue w3-hover-text-light-blue"
             >About Us</a
@@ -229,6 +408,8 @@
             >Car Talk</a
           >
         </p>
+
+        <!-- this is the social link -->
         <p class="w3-small">
           Follow us on
           <a
