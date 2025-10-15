@@ -6,31 +6,79 @@
     <title>About</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
     <style>
-      /* this is making the footer stay at the bottom even on short pages */
       html,
       body {
         height: 100%;
-      } /* this is letting vh math work */
+      }
       body {
-        min-height: 100vh; /* this is ensuring full viewport height */
-        display: flex; /* this is turning the page into a column flexbox */
-        flex-direction: column; /* this is stacking header -> main -> footer */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
       main {
         flex: 1 0 auto;
-      } /* this is letting main grow and push footer down */
+      }
       footer {
         margin-top: auto;
-      } /* this is pinning footer to the bottom when content is short */
+      }
+
+      /* Announcement banner styling */
+      .info-banner {
+        background-color: #e3f2fd;
+        color: #000;
+        text-align: center;
+        padding: 12px 16px;
+        font-size: 18px;
+        border-bottom: 2px solid #2196f3;
+      }
+
+      .info-banner a {
+        color: #2196f3;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .info-banner a:hover {
+        text-decoration: underline;
+      }
+
+      /* Newsletter form styling */
+      .newsletter {
+        background-color: #f1f1f1;
+        padding: 40px 20px;
+        border-top: 2px solid #2196f3;
+      }
+      .newsletter input[type="text"],
+      .newsletter input[type="email"],
+      .newsletter input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .newsletter button {
+        background-color: #2196f3;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .newsletter button:hover {
+        background-color: #0b7dda;
+      }
     </style>
   </head>
+
   <body>
-    <!-- this is your existing navbar -->
+    <!-- Navbar -->
     <div class="w3-bar w3-black">
       <a href="index.html" class="w3-bar-item">
         <img
           style="width: 60px"
           src="https://images.squarespace-cdn.com/content/v1/5e30903bd46e49641286bc4b/1580242027581-JTRKAVIWUHDQXZFZA9L8/AV+Repair+Logo.png"
+          alt="AV Repair Logo"
         />
       </a>
       <a href="index.html" class="w3-bar-item w3-button w3-hover-blue">Home</a>
@@ -44,6 +92,12 @@
       <a href="cartalk.html" class="w3-bar-item w3-button w3-hover-blue"
         >Car Talk</a
       >
+      <a href="ContactUs.html" class="w3-bar-item w3-button w3-hover-blue"
+        >Contact Us</a
+      >
+      <a href="JoinUs.html" class="w3-bar-item w3-button w3-hover-blue"
+        >Join Us</a
+      >
       <a
         href="https://www.facebook.com/groups/1889685858011404/"
         class="w3-bar-item w3-button w3-right w3-hover-blue"
@@ -51,12 +105,21 @@
         <img
           style="width: 30px"
           src="https://static.vecteezy.com/system/resources/previews/021/495/985/non_2x/facebook-social-media-logo-icon-free-png.png"
+          alt="Facebook"
         />
       </a>
     </div>
 
+    <!-- Info banner at top -->
+    <div class="info-banner">
+      To contact us or book an after-hours appointment, please refer to our
+      <a href="ContactUs.html">Contact Page</a>. If you are interested in
+      joining our team, please refer to our
+      <a href="JoinUs.html">Hiring Form</a>.
+    </div>
+
     <main>
-      <!-- this is the visible About heading + subtext you wanted -->
+      <!-- About Section -->
       <div class="w3-content" style="max-width: 900px; padding: 48px 16px">
         <h1
           class="w3-center w3-text-blue"
@@ -64,16 +127,178 @@
         >
           About AV Repair
         </h1>
-        <p class="w3-center" style="font-size: 20px">
-          this is where your about page content can go (mission, history, team,
-          etc.).
+
+        <p style="font-size: 18px; line-height: 1.6">
+          Since 1988, AV Repair has proudly served the community with expert
+          auto body repair, mechanical services, paint restoration, and more.
+          Our dedicated team of technicians combines years of experience with a
+          passion for precision and customer satisfaction.
         </p>
-        <!-- this is a spacer so you can see content above the footer clearly -->
-        <div style="height: 120px"></div>
+
+        <h2 class="w3-text-blue">Our Mission</h2>
+        <p style="font-size: 18px; line-height: 1.6">
+          Our goal is simple — to ensure your complete satisfaction, whether you
+          visit for regular maintenance or extensive repairs. We believe that
+          our reputation is built through word of mouth, and we strive to earn
+          your trust with every job we complete.
+        </p>
+
+        <blockquote
+          style="
+            font-style: italic;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+            padding-left: 12px;
+          "
+        >
+          “Jim and his team are my go-to auto service shop. I’ve been taking my
+          cars to him for over 25 years. They’ve done everything from body work
+          to engine repair. I wouldn’t think of taking a vehicle of mine
+          anywhere else.”<br />
+          — Paul M., Andover, MA
+        </blockquote>
+
+        <p style="font-size: 18px; line-height: 1.6">
+          We take pride in forming long-term relationships with our customers
+          and treating each repair with the attention it deserves. At AV Repair,
+          our promise is to deliver honest, high-quality work without inflated
+          prices. We offer complete bumper-to-bumper service using trusted parts
+          and fluids so you can drive with confidence.
+        </p>
+
+        <h2 class="w3-text-blue">Our Team</h2>
+        <p style="font-size: 18px; line-height: 1.6">
+          Our team is led by Jim Morrison, a seasoned professional with over
+          three decades of experience in the auto repair industry. Alongside him
+          is a skilled group of ASE-certified technicians who are continually
+          trained on the latest automotive technologies and repair techniques.
+          Together, we make sure that every vehicle we service meets our highest
+          standards of quality, performance, and safety.
+        </p>
+
+        <!-- Group Photo -->
+        <div class="w3-center" style="margin: 32px 0">
+          <img
+            src="GroupPhoto.jpg"
+            alt="AV Repair Team Group Photo"
+            class="w3-image w3-round-large"
+            style="max-width: 100%; height: auto"
+          />
+          <p style="font-size: 16px; color: gray; margin-top: 8px">
+            <em>Our dedicated team at AV Repair (From left to right)</em>
+          </p>
+        </div>
+
+        <!-- Individual Team Members -->
+        <div class="w3-row-padding w3-center" style="margin-top: 32px">
+          <div class="w3-quarter w3-margin-bottom">
+            <div class="w3-card w3-padding w3-hover-shadow">
+              <h3 class="w3-text-blue">David Hamilton</h3>
+              <p><strong>Senior Mechanical Engineer</strong></p>
+              <p>
+                Specializes in engine diagnostics, tune-ups, and performance
+                optimization.
+              </p>
+            </div>
+          </div>
+
+          <div class="w3-quarter w3-margin-bottom">
+            <div class="w3-card w3-padding w3-hover-shadow">
+              <h3 class="w3-text-blue">Laura Salamanca</h3>
+              <p><strong>Body & Paint Specialist</strong></p>
+              <p>
+                Expert in precision body repair, paint restoration, and color
+                matching.
+              </p>
+            </div>
+          </div>
+
+          <div class="w3-quarter w3-margin-bottom">
+            <div class="w3-card w3-padding w3-hover-shadow">
+              <h3 class="w3-text-blue">Jack Pelletier</h3>
+              <p><strong>Suspension & Brake Engineer</strong></p>
+              <p>
+                Focuses on safety, alignment, and advanced suspension systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="w3-quarter w3-margin-bottom">
+            <div class="w3-card w3-padding w3-hover-shadow">
+              <h3 class="w3-text-blue">George Mullin</h3>
+              <p><strong>Electrical & Diagnostics Engineer</strong></p>
+              <p>
+                Specialist in vehicle electronics, wiring systems, and computer
+                diagnostics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="w3-text-blue">What We Do</h3>
+        <ul style="font-size: 18px; line-height: 1.8">
+          <li>Auto body and paint repairs</li>
+          <li>Frame and suspension repairs</li>
+          <li>Engine tune-ups</li>
+          <li>Insured collision repair</li>
+          <li>Tire and brake service</li>
+          <li>Exhaust and cooling systems</li>
+          <li>Air conditioning repair</li>
+          <li>Front-end alignment</li>
+          <li>Oil and fluid maintenance</li>
+          <li>Tire rotation and balancing</li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="newsletter w3-center">
+        <h2 class="w3-text-blue">Subscribe to Our Newsletter</h2>
+        <p>
+          Sign up with your information to receive updates, news, and exclusive
+          offers.
+        </p>
+        <form class="w3-content" style="max-width: 600px; text-align: left">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your first name"
+            required
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name"
+            required
+          />
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Your phone number"
+          />
+
+          <button type="submit">Sign Up</button>
+        </form>
       </div>
     </main>
 
-    <!-- this is the global footer -->
+    <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-32 w3-text-white">
       <div class="w3-content" style="max-width: 1000px">
         <p>© 2025 AV Repair — All Rights Reserved.</p>
