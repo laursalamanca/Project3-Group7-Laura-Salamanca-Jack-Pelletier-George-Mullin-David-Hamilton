@@ -12,6 +12,16 @@ Home Page (Laura Salamanca)
 - Added a link to go to Google to review AV Repair Inc. if you click on the "Google" logo
 - Added an image slideshow to show off the different services the company offers. This consolidates
   the images so there is not a long list of pictures taking up the whole page.
+About Page (Jack Pelletier)
+-Added Image of the owner Jim in the about our team portion of the page
+-Added group photo as well as different titles for each of our group members in the 
+our team porton
+-Created a banner at the top of about that contains the contact and hiring form, with
+descriptions about what can be found on each page
+-Made the "Subcribe to Newsletter" box now ask for hte users phone number as well
+as making it larger to it is more noticable when the user scrolls down
+
+
 
   W3 Schools CSS Features Used:
   - w3 bar
