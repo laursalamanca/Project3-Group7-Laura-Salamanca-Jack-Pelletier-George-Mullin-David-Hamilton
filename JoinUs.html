@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Team</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        flex: 1 0 auto;
+      }
+      footer {
+        margin-top: auto;
+      }
+
+      /* Form styling */
+      form input[type="text"],
+      form input[type="email"],
+      form input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0 16px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      form button {
+        background-color: #2196f3;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      form button:hover {
+        background-color: #0b7dda;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="w3-bar w3-black">
+      <a href="index.html" class="w3-bar-item">
+        <img
+          style="width: 60px"
+          src="https://images.squarespace-cdn.com/content/v1/5e30903bd46e49641286bc4b/1580242027581-JTRKAVIWUHDQXZFZA9L8/AV+Repair+Logo.png"
+        />
+      </a>
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-blue">Home</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-hover-blue">About</a>
+      <a href="services.html" class="w3-bar-item w3-button w3-hover-blue"
+        >Services</a
+      >
+      <a href="ourwork.html" class="w3-bar-item w3-button w3-hover-blue"
+        >Our Work</a
+      >
+      <a href="cartalk.html" class="w3-bar-item w3-button w3-hover-blue"
+        >Car Talk</a
+      >
+      <a
+        href="https://www.facebook.com/groups/1889685858011404/"
+        class="w3-bar-item w3-button w3-right w3-hover-blue"
+      >
+        <img
+          style="width: 30px"
+          src="https://static.vecteezy.com/system/resources/previews/021/495/985/non_2x/facebook-social-media-logo-icon-free-png.png"
+        />
+      </a>
+    </div>
+
+    <main>
+      <div class="w3-content" style="max-width: 800px; padding: 48px 16px">
+        <h1
+          class="w3-center w3-text-blue"
+          style="font-size: 56px; font-weight: 700"
+        >
+          Join the Team
+        </h1>
+
+        <p class="w3-center" style="font-size: 20px; margin-bottom: 32px">
+          <strong>We are Hiring. Contact us.</strong><br />
+          We are looking to hire experienced mechanics and auto body
+          technicians.
+        </p>
+
+        <p class="w3-center" style="font-size: 18px">
+          Complete the form and we’ll be in touch soon.
+        </p>
+
+        <!-- Job Application Form -->
+        <form class="w3-card w3-padding w3-white" style="margin-top: 24px">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your first name"
+            required
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name"
+            required
+          />
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Your phone number"
+          />
+
+          <div class="w3-center" style="margin-top: 24px">
+            <button type="submit">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-32 w3-text-white">
+      <div class="w3-content" style="max-width: 1000px">
+        <p>© 2025 AV Repair — All Rights Reserved.</p>
+        <p>
+          <a href="about.html" class="w3-text-blue w3-hover-text-light-blue"
+            >About Us</a
+          >
+          |
+          <a href="services.html" class="w3-text-blue w3-hover-text-light-blue"
+            >Services</a
+          >
+          |
+          <a href="ourwork.html" class="w3-text-blue w3-hover-text-light-blue"
+            >Our Work</a
+          >
+          |
+          <a href="cartalk.html" class="w3-text-blue w3-hover-text-light-blue"
+            >Car Talk</a
+          >
+        </p>
+        <p class="w3-small">
+          Follow us on
+          <a
+            href="https://www.facebook.com/groups/1889685858011404/"
+            target="_blank"
+            class="w3-text-blue w3-hover-text-light-blue"
+            >Facebook</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
