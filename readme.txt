@@ -115,3 +115,17 @@
   git add .
   git commit -m "Updated ContactUs and OurWork pages, restored images, added global footer"
   git push origin main
+
+
+### Services Page (George Mullin)
+  - Consolidated the large dropdown of services into one page since there was not much information on each page
+  - Added a drop down to view all the different services, which loads quicker than if you were to visit a whole new page for 
+    each of them
+  
+ **W3 Schools CSS Features Used:** 
+ - w3 bar
+ - w3 button
+ - w3 center
+ - w3 content
+ - w3 small
+ - w3 text
