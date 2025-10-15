@@ -5,14 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <style>
+      /* this is making the footer stay at the bottom even if content is short */
+      html,
+      body {
+        height: 100%;
+      } /* this is enabling full-height layout */
+      body {
+        min-height: 100vh; /* this is ensuring at least the viewport height */
+        display: flex; /* this is making a column layout */
+        flex-direction: column; /* this is stacking nav -> main -> footer */
+      }
+      main {
+        flex: 1 0 auto;
+      } /* this is letting main take remaining space */
+      footer {
+        margin-top: auto;
+      } /* this is pushing footer to the bottom */
+    </style>
   </head>
   <body>
+    <!-- this is your navbar -->
     <div class="w3-bar w3-black">
-      <a
-        href="index.html"
-        class="w3-bar-item"
-        ><img style = "width: 60px"
-        src= https://images.squarespace-cdn.com/content/v1/5e30903bd46e49641286bc4b/1580242027581-JTRKAVIWUHDQXZFZA9L8/AV+Repair+Logo.png>
+      <a href="index.html" class="w3-bar-item">
+        <img
+          style="width: 60px"
+          src="https://images.squarespace-cdn.com/content/v1/5e30903bd46e49641286bc4b/1580242027581-JTRKAVIWUHDQXZFZA9L8/AV+Repair+Logo.png"
+        />
       </a>
       <a href="index.html" class="w3-bar-item w3-button w3-hover-blue">Home</a>
       <a href="about.html" class="w3-bar-item w3-button w3-hover-blue">About</a>
@@ -28,40 +47,115 @@
       <a
         href="https://www.facebook.com/groups/1889685858011404/"
         class="w3-bar-item w3-button w3-right w3-hover-blue"
-        ><img style = "width: 30px"
-        src=https://static.vecteezy.com/system/resources/previews/021/495/985/non_2x/facebook-social-media-logo-icon-free-png.png>
+      >
+        <img
+          style="width: 30px"
+          src="https://static.vecteezy.com/system/resources/previews/021/495/985/non_2x/facebook-social-media-logo-icon-free-png.png"
+        />
       </a>
     </div>
+
+    <main>
+      <!-- this is your services selector section -->
+      <div style="text-align: center">
+        <h1><b style="color: #2196f3">What can we do for you?</b></h1>
+
+        <!-- this is the dropdown (unchanged) -->
+        <select id="Dropdown" onchange="picker()">
+          <option value="" disabled selected hidden>Select an option</option>
+          <option value="collison">Collision Repair</option>
+          <option value="appraisal">Appraisal</option>
+          <option value="free">Free Written Repair Estimates</option>
+          <option value="computerized">Computerized Maintenance Records</option>
+          <option value="restoration">Restoration</option>
+          <option value="ATMS">
+            Automotive Technical & Mechanical Services
+          </option>
+          <option value="autobody">Auto Body Repair</option>
+          <option value="paint">Paint Services</option>
+          <option value="frame">Frame and Suspension Repair</option>
+          <option value="rust">Rust Repair</option>
+          <option value="tuning">Engine Tuning and Performance</option>
+          <option value="exaust">Exhaust Systems</option>
+          <option value="oil">Oil and Fluid Maintenance</option>
+          <option value="rotate">Tire Rotation and Balancing</option>
+          <option value="brake">Brake Repair</option>
+          <option value="tires">Tires</option>
+        </select>
+
+        <h1 style="text-align: left; color: #2196f3; margin-left: 20px">
+          <b><u id="header"></u></b>
+        </h1>
+
+        <!-- this is your CTA button -->
+        <a href="tel:9789750957">
+          <button class="w3-button w3-large w3-gray w3-hover-blue">
+            Click to call now!
+          </button>
+        </a>
+
+        <!-- this is where service.js prints selected text -->
+        <p
+          id="serviceD"
+          style="
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
+              sans-serif;
+            font-size: 23px;
+            margin-left: 20px;
+            text-align: center;
+            margin-right: 20px;
+          "
+        ></p>
+
+        <!-- this is where extra list items/details go -->
+        <div
+          id="add"
+          style="
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
+              sans-serif;
+            font-size: 23px;
+            margin-left: 20px;
+            text-align: left;
+          "
+        ></div>
+      </div>
+    </main>
+
+    <!-- this is your script that powers the dropdown -->
+    <script src="/scripts/service.js"></script>
+
+    <!-- this is the global footer -->
+    <footer class="w3-center w3-black w3-padding-32 w3-text-white">
+      <div class="w3-content" style="max-width: 1000px">
+        <p>© 2025 AV Repair — All Rights Reserved.</p>
+        <p>
+          <a href="about.html" class="w3-text-blue w3-hover-text-light-blue"
+            >About Us</a
+          >
+          |
+          <a href="services.html" class="w3-text-blue w3-hover-text-light-blue"
+            >Services</a
+          >
+          |
+          <a href="ourwork.html" class="w3-text-blue w3-hover-text-light-blue"
+            >Our Work</a
+          >
+          |
+          <a href="cartalk.html" class="w3-text-blue w3-hover-text-light-blue"
+            >Car Talk</a
+          >
+        </p>
+        <p class="w3-small">
+          Follow us on
+          <a
+            href="https://www.facebook.com/groups/1889685858011404/"
+            target="_blank"
+            class="w3-text-blue w3-hover-text-light-blue"
+            >Facebook</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- this is all inside </body> now so layout stays valid -->
   </body>
-  <script src="/scripts/service.js"></script>
-  <div style="text-align: center;">
-  <h1><b style="color: #2196f3;">What can we do for you?</b></h1>
-<select id="Dropdown" onchange="picker()">
-    <option value="" disabled selected hidden>Select an option</option>
-    <option value="collison">Collision Repair</option>
-    <option value="appraisal">Appraisal</option>
-    <option value="free">Free Written Repair Estimates</option>
-    <option value="computerized">Computerized Maintenance Records</option>
-    <option value="restoration">Restoration</option>
-    <option value="ATMS">Automotive Technical & Mechanical Services</option>
-    <option value="autobody">Auto Body Repair</option>
-    <option value="paint">Paint Services</option>
-    <option value="frame">Frame and Suspension Repair</option>
-    <option value="rust">Rust Repair</option>
-    <option value="tuning">Engine Tuning and Performance</option>
-    <option value="exaust">Exhaust Systems</option>
-    <option value="oil">Oil and Fluid Maintenance</option>
-    <option value="rotate">Tire Rotation and Balancing</option>
-    <option value="brake">Brake Repair</option>
-    <option value="tires">Tires</option>
-</select>
-<h1 style="text-align: left; color:#2196f3; margin-left: 20px;"><b><u id="header"></u></b></h1>
- <a href="tel:9789750957"><button class="w3-button w3-large w3-gray w3-hover-blue">Click to call now!</button></a>
-<p style = "font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-size: 23px; margin-left: 20px; text-align: center; margin-right: 20px;"id="serviceD"></p>
-<div style= "font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-size: 23px; margin-left: 20px; text-align: left;" id="add">
-  
-  </ul>
-</div>
-</div>
-</body>
 </html>
